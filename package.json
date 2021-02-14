@@ -1,0 +1,23 @@
+{
+  "name": "link-shortener-v3",
+  "version": "1.1.0",
+  "description": "Link shortener",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConnorTews/Link-Shortener-V3.git"
+  },
+  "author": "Connor Tews",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/ConnorTews/Link-Shortener-V3/issues"
+  },
+  "homepage": "https://github.com/ConnorTews/Link-Shortener-V3#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "feather-icons": "^4.28.0"
+  }
+}
