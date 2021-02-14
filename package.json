@@ -1,8 +1,8 @@
 {
   "name": "link-shortener-v3",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "Link shortener",
-  "main": "index.php",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
