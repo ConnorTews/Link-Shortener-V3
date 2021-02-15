@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <meta name="description" content="Linkshortener, Link, Shortener">
+    <meta name="description" content="Linkshortener, Link, Shortener" />
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="icons/apple-icon-180.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -155,7 +155,18 @@
     <div class="home_page_content">
       <div class="home_title">
         <h1>Lorem, ipsum.</h1>
-        <i data-feather="link-2"></i>
+      </div>
+      <div class="add_button">
+        <button type="button" onclick="">
+          <i data-feather="plus"></i>
+        </button>
+        <script>
+          function new_link() {
+            var new_link = document.getElementById("new_link_form");
+            new_link.classList.toggle("new_link_form");
+            new_link.classList.toggle("none");
+          }
+        </script>
       </div>
       <div class="mini_nav_area">
         <div class="mini_nav_item">
@@ -172,9 +183,65 @@
         </div>
       </div>
       <div class="home_main_content">
-
+        <table>
+          <tr>
+            <th>Long Link</th>
+            <th>Short Link</th>
+            <th>Clicks</th>
+            <th class="copy">Copy</th>
+            <th class="delete">Delete</th>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://connort.com/Loremipsumdolorsitametconsectetur">
+                <input
+                  type="text"
+                  name="longlink"
+                  id="longlink"
+                  value="https://connort.com/Loremipsumdolorsitametconsectetur"
+                />
+              </a>
+            </td>
+            <td>
+              <a href="https://connort.com/d0v0am">
+                <input
+                  type="text"
+                  name="shortlink"
+                  id="shortlink"
+                  value="https://connort.com/d0v0am"
+                />
+              </a>
+            </td>
+            <td>0</td>
+            <td>
+              <button type="button">Copy</button>
+            </td>
+            <td>
+              <form action="" method="post">
+                <button type="delete">Delete</button>
+              </form>
+            </td>
+          </tr>
+        </table>
       </div>
     </div>
+    <div class="none" id="new_link_form">
+      <i data-feather="x" onclick="new_link()"></i>
+      <form action="" method="post">
+        <input
+          type="url"
+          name="long_link_inp"
+          placeholder="url..."
+          autocomplete="false"
+        />
+        <div class="click_count_check">
+          <input type="checkbox" name="click_count_check" />
+          <span>Count clicks</span>
+        </div>
+        <button type="submit" name="long_link_sub">Shorten</button>
+      </form>
+    </div>
+    <footer></footer>
     <script>
       feather.replace();
     </script>
