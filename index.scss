@@ -7,6 +7,7 @@ $secondaryLightColor: #ffffff;
 $secondaryDarkColor: #b1bfca;
 $primaryTextColor: #212121;
 $secondaryTextColor: #263238;
+$deletebackgroundcolor: #fd4545;
 * {
   padding: 0;
   margin: 0;
@@ -114,7 +115,7 @@ body {
     width: 80vw;
     z-index: 3;
     position: relative;
-    top: 2.8rem;
+    top: 2.5rem;
     .mini_nav_item {
       a {
         text-decoration: none;
@@ -138,15 +139,37 @@ body {
     background-color: $primaryDarkColor;
     top: 1rem;
     padding: 3rem 1rem;
+    height: 100%;
     table {
       border-collapse: collapse;
+      width: 100%;
       tr {
         background-color: $secondaryDarkColor;
         th {
+          padding: 0.25rem;
           border: 0.1rem solid $secondaryTextColor;
         }
         td {
           border: 0.1rem solid $secondaryTextColor;
+          padding: 0.25rem;
+          a {
+            width: 100%;
+            input {
+              width: 100%;
+              border: none;
+            }
+          }
+          button {
+            width: 100%;
+            height: 100%;
+            border: none;
+            cursor: pointer;
+          }
+          form {
+            button {
+              background-color: red;
+            }
+          }
         }
       }
       tr:nth-child(even) {
@@ -186,13 +209,18 @@ body {
   height: 100vh;
   svg {
     position: absolute;
-    top: -0.1rem;
     right: -0.1rem;
-    padding: 1rem;
+    top: -0.1rem;
     background-color: $primaryColor;
-    border: 0.1rem solid $primaryTextColor;
+    padding: 0.5rem;
     border-bottom-left-radius: 0.7rem;
-    cursor: pointer;
+    border: 0.1rem solid $primaryTextColor;
+    transition: 0.3s;
+  }
+  svg:hover {
+    padding: 1rem;
+    background-color: $primaryDarkColor;
+    transition: 0.3s;
   }
   form {
     background-color: $primaryColor;
@@ -217,6 +245,7 @@ body {
       border-radius: 0.25rem;
       width: 100%;
       padding: 0.5rem 0;
+      cursor: pointer;
     }
   }
 }
@@ -225,6 +254,45 @@ footer {
   bottom: 0px;
   height: 10vh;
   width: 100%;
-  z-index: 5;
   background-color: $primaryColor;
+  .settings {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    button {
+      background-color: transparent;
+      border: none;
+      svg {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 0.5rem;
+        border-top: 0.1rem solid $primaryTextColor;
+        border-left: 0.1rem solid $primaryTextColor;
+        border-top-left-radius: 0.7rem;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+      svg:hover {
+        transition: 0.3s;
+        padding: 1rem;
+        background-color: $primaryDarkColor;
+      }
+    }
+    span {
+      position: absolute;
+      visibility: hidden;
+      border: 0.1rem solid $primaryTextColor;
+      padding: 0.25rem;
+      background-color: $primaryColor;
+      right: 0.1rem;
+      bottom: 4rem;
+      width: 130px;
+    }
+  }
+  .settings:hover {
+    span {
+      visibility: visible;
+    }
+  }
 }
