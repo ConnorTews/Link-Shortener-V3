@@ -22,10 +22,19 @@ $longLink = $_POST['long_link_inp'];
 $longLink = htmlspecialchars($longLink);
 $longLink = stripslashes($longLink);
 
+$counter = $_POST['click_count_check'];
+
 $linkID = linkgen();
 
 $config = require '../config.php';
 
 if (!file_exists("../".$config['link_path'])) {
   mkdir("../".$config['link_path']);
+}
+// if ($counter === "on") {
+
+// }
+if (!file_exists("../".$config['link_path']."/".$linkID."/")) {
+  mkdir("../".$config['link_path']."/".$linkID."/");
+  
 }

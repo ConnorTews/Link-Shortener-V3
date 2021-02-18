@@ -1,6 +1,6 @@
 {
   "name": "link-shortener-v3",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Link shortener",
   "main": "index.html",
   "scripts": {
