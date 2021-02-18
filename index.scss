@@ -135,6 +135,7 @@ body {
   }
   .home_main_content {
     width: 85vw;
+    height: 50px;
     position: relative;
     background-color: $primaryDarkColor;
     top: 1rem;
@@ -147,29 +148,82 @@ body {
         background-color: $secondaryDarkColor;
         th {
           padding: 0.25rem;
-          border: 0.1rem solid $secondaryTextColor;
         }
         td {
-          border: 0.1rem solid $secondaryTextColor;
           padding: 0.25rem;
           a {
             width: 100%;
             input {
               width: 100%;
               border: none;
+              background-color: transparent;
             }
           }
-          button {
+          .copy {
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-align-content: center;
+            -ms-flex-line-pack: center;
+            align-content: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            background-color: transparent;
             width: 100%;
-            height: 100%;
             border: none;
-            cursor: pointer;
-          }
-          form {
-            button {
-              background-color: red;
+            svg {
+              background-color: $primaryColor;
+              border-radius: 0.25rem;
+              padding: 0.2rem;
+              width: 1.5rem;
+              height: 1.5rem;
+              cursor: pointer;
             }
           }
+          .delete {
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-align-content: center;
+            -ms-flex-line-pack: center;
+            align-content: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            background-color: transparent;
+            border: none;
+            width: 100%;
+            svg {
+              background-color: red;
+              border-radius: 0.25rem;
+              padding: 0.2rem;
+              width: 1.5rem;
+              height: 1.5rem;
+              cursor: pointer;
+            }
+          }
+        }
+        .clicks {
+          text-align: center;
         }
       }
       tr:nth-child(even) {
@@ -250,7 +304,7 @@ body {
   }
 }
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   height: 10vh;
   width: 100%;
