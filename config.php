@@ -1,8 +1,8 @@
 <?php return [
 
-'domain_name' => 'https://l.ryot.cc',
+'domain_name' => 'https://domain.com',
 
-'page_name' => 'Ryot Link Shortener',
+'page_name' => 'Lorem Link Shortener',
 
 'link_path' => 'l',
 

@@ -148,7 +148,7 @@ if ($config['public_access'] === 'false') {
   </div>
   <div class="none" id="new_link_form">
     <i data-feather="x" onclick="new_link()"></i>
-    <form action="" method="post">
+    <form action="./core/createlink.inc.php" method="post">
       <input type="url" name="long_link_inp" id="long_link_inp" placeholder="" autocomplete="false" />
       <div class="click_count_check">
         <input type="checkbox" name="click_count_check" />
