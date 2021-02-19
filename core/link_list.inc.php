@@ -41,8 +41,9 @@ foreach ($fileList as $filename) {
             </script>
           </td>
           <td>
-            <form action="" method="post">
-              <button type="delete" class="delete" name="delete">
+            <form action="./core/deletelink.inc.php" method="post">
+              <input type="hidden" name="linkid" value="'.$metaData['id'].'">
+              <button type="delete" class="delete" name="delete_link">
                 <i data-feather="x"></i>
               </button>
             </form>
